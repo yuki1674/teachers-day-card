@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ceb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f7ede2;
+      --card-bg: #ffffff;
+      --pink-soft: #f4acb7;
+      --accent: #9d8189;
+      --text-main: #5e503f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #fdf8f5;
+      background-image: radial-gradient(#e8d8ce 1px, transparent 1px);
+      background-size: 18px 18px;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+    }
+
+    .card-viewport {
+      width: 100%;
+      max-width: 480px;
+      min-height: 620px;
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(94, 80, 63, 0.12);
+      border: 1px solid #f0e6df;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-screen {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transform: translateY(10px);
+    }
+
+    .card-screen.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .title-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #9d8189;
+      margin-bottom: 25px;
+    }
+
+    .pill-btn {
+      background: linear-gradient(135deg, #e8ae9a, #f4acb7);
+      color: white;
+      border: none;
+      padding: 14px 45px;
+      border-radius: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(244, 172, 183, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .pill-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .envelope-wrapper {
+      position: relative;
+      width: 240px;
+      height: 170px;
+      background: #4a7c59;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wax-seal {
+      width: 55px; height: 55px;
+      background: #c9184a;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #ffb5a7;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .letter-paper {
+      background: #fffcf7;
+      border: 1px solid #f3e9dc;
+      border-radius: 16px;
+      padding: 22px;
+      max-height: 480px;
+      overflow-y: auto;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.35rem;
+      line-height: 1.7;
+      color: #4a3e3d;
+      text-align: left;
+    }
+
+    .flower-img {
+      width: 210px;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-viewport">
+    
+    <!-- PAGE 1 -->
+    <div class="card-screen active" id="p1">
+      <div style="font-size:2.5rem; margin-bottom:15px;">🌸</div>
+      <h1 class="title-script">You have a message!</h1>
+      <button class="pill-btn" onclick="nextPage(2)">OPEN</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="card-screen" id="p2">
+      <h2 style="font-family:'Dancing Script', cursive; font-size:2.2rem; color:#9d8189; margin-bottom:15px;">open the letter</h2>
+      <div class="envelope-wrapper" onclick="nextPage(3)">
+        <div class="wax-seal">🌸</div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: TEACHER'S DAY MESSAGE -->
+    <div class="card-screen" id="p3">
+      <div class="letter-paper">
+        <p style="font-size:1.6rem; font-weight:bold; color:#c9184a; margin-bottom:10px;">Dear Teacher, 🌸</p>
+        <p>Happy Teacher's Day! I just wanted to take this time to express my deepest gratitude for everything that you do. Daghang kaayong salamat sa imong pasensya, dedikasyon, ug sa dili matukib nga pagpanudlo sa amoa matag adlaw.</p>
+        <br>
+        <p>You are more than just an educator to us — you are a guide, a mentor, and a true inspiration. Dako kaayo among pasalamat kay bisan pa man sa ka kapoy ug kadaghan sa buhatonon, pabilin gihapon kang mapahiyumon ug andam nga motabang ug mosabot sa amoa.</p>
+        <br>
+        <p>Thank you for believing in us even when we doubt ourselves, and for continuously encouraging us to do our best. Ang imong mga leksyon ug pahimatngon magpabilin gyud sa among mga kasingkasing ug huna-huna hangtod sa among pagdako.</p>
+        <br>
+        <p>May God bless you with good health, joy, and peace of mind. Daghang salamat sa tanan nimong sakripisyo, Teacher!</p>
+        <br>
+        <p style="text-align:right; font-weight:bold; margin-top:15px; color:#c9184a;">From: Your student, Martinez ✨</p>
+      </div>
+      <button class="pill-btn" style="margin-top:15px; padding:8px 25px; font-size:0.9rem;" onclick="nextPage(4)">CONTINUE ✨</button>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="card-screen" id="p4">
+      <h1 class="title-script">Open for a surprise!</h1>
+      <button class="pill-btn" onclick="nextPage(5)">OPEN</button>
+    </div>
+
+    <!-- PAGE 5: FLOWER BOUQUET -->
+    <div class="card-screen" id="p5">
+      <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500&auto=format&fit=crop&q=80" class="flower-img" alt="Pretty Flower Bouquet">
+      <h2 style="font-family:'Dancing Script', cursive; font-size:2.2rem; color:#9d8189; margin-bottom:20px;">A special bouquet for you, Teacher! 💐</h2>
+      <button class="pill-btn" onclick="nextPage(6)">READ MORE</button>
+    </div>
+
+    <!-- PAGE 6 -->
+    <div class="card-screen" id="p6">
+      <div style="font-size:2.5rem; margin-bottom:10px;">🌸</div>
+      <p style="font-size:1.15rem; line-height:1.8; color:#5e503f; margin-bottom:20px; font-family:'Dancing Script', cursive;">
+        "To the teachers who guide, inspire, and believe in us — thank you for making a difference every single day!"
+      </p>
+      <h3 style="font-family:'Great Vibes', cursive; font-size:2.5rem; color:#c9184a; margin-bottom:10px;">Happy Teacher's Day! 🎉</h3>
+      <p style="font-weight:bold; color:#9d8189; margin-bottom:25px;">From: Your student, Martinez</p>
+      <button class="pill-btn" onclick="nextPage(1)">BACK TO START 🔄</button>
+    </div>
+
+  </div>
+
+  <script>
+    function nextPage(pageNum) {
+      document.querySelectorAll('.card-screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('p' + pageNum).classList.add('active');
+    }
+  </script>
+</body>
+</html>
